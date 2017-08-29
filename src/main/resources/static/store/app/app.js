@@ -31,6 +31,11 @@ app.config(function($stateProvider, $urlRouterProvider ,$httpProvider) {
 		templateUrl: UIUrl+'/contact.html'
 	})
 	
+	.state('taxfile',{
+		url: '/taxfile',
+		templateUrl: UIUrl+'/taxfile.html'
+	})
+	
 });
 
 app.directive('nextOnEnter', function () {
@@ -107,6 +112,9 @@ app.controller('navCtrl', function($location){
 	}
 	this.contact = function(consignments){
 		$location.path('/contact')
+	}
+	this.taxfile = function(consignments){
+		$location.path('/taxfile')
 	}
 });
 
